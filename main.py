@@ -1,6 +1,7 @@
 def main():
     name = input("Введите ваше имя: ").strip()
     language = input("Выберите язык (ru/en): ").strip().lower()
+    uppercase = input("Использовать верхний регистр? (y/n): ").strip().lower()
 
     if language == "ru":
         greeting = "Привет"
@@ -8,9 +9,14 @@ def main():
         greeting = "Hello"
 
     if name:
-        print(f"{greeting}, {name}!")
+        message = f"{greeting}, {name}!"
     else:
-        print(f"{greeting}, World!")
+        message = f"{greeting}, World!"
+
+    if uppercase == "y":
+        message = message.upper()
+
+    print(message)
 
 
 if __name__ == "__main__":
