@@ -1,5 +1,5 @@
 def main():
-    name = input("Введите ваше имя: ")
+    name = input("Введите ваше имя: ").strip()
 
     if name:
         print(f"Hello, {name}!")
